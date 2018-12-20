@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'app\\classes\\curl\\Curl' => $baseDir . '/app/classes/curl/Curl.php',
 );

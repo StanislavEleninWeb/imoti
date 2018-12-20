@@ -20,11 +20,16 @@ class ComposerStaticInit3d295468a769481c6a4c4f03600e1b39
         ),
     );
 
+    public static $classMap = array (
+        'app\\classes\\curl\\Curl' => __DIR__ . '/../..' . '/app/classes/curl/Curl.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3d295468a769481c6a4c4f03600e1b39::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3d295468a769481c6a4c4f03600e1b39::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3d295468a769481c6a4c4f03600e1b39::$classMap;
 
         }, null, ClassLoader::class);
     }
